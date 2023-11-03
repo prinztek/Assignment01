@@ -2,7 +2,13 @@
 public class Project {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// Instantiate Hero
+		Hero mark = new Hero("Mark Strong");
+		
+		// call Hero methods
+		mark.show();
+		mark.fight();
 
 	}
 

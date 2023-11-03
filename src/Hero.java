@@ -41,7 +41,6 @@ public class Hero {
 	
 	// PUBLIC METHODS *******************************************
 	public void fight() {
-		System.out.println("The " + this.name + " is fighting!");
 		// call hitAttempt() and if returns true call hitDamage()
 		if (hitAttempt()) {
 			int totalDamage = hitDamage();
@@ -50,6 +49,7 @@ public class Hero {
 	}
 	
 	public void show() {
+		System.out.println(this.name + " Abilities");
 		System.out.println("--------------------------------");
 		System.out.println("strength: " + this.strength);
 		System.out.println("speed: " + this.speed);
