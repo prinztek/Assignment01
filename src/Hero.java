@@ -23,7 +23,9 @@ public class Hero {
 	}
 	
 	private boolean hitAttempt() {
+		// generate number from 1 to 6
 		int randomNumber = (int)(Math.random() * 5 + 1);
+		// returns only true  for randomNumber 1 to represent 20% chance of returning true
 		if (randomNumber == 1) {
 			return true;
 		} else {
@@ -32,17 +34,19 @@ public class Hero {
 	}
 	
 	private int hitDamage() {
+		// generate number from 1 to 6 multiplied to this.strength
 		int damage = (int)(Math.random() * 6 + 1) * this.strength;
 		return damage;
 	}
 	
 	// PUBLIC METHODS *******************************************
-	public boolean fight() {
+	public void fight() {
 		System.out.println("The " + this.name + " is fighting!");
-		// call hitAttempt()
-		// if hitAttempt() returns true
-		// call hitDamage()
-		return true;
+		// call hitAttempt() and if returns true call hitDamage()
+		if (hitAttempt()) {
+			int totalDamage = hitDamage();
+			System.out.println("Total damage: " + totalDamage);
+		}
 	}
 	
 	public void show() {
